@@ -1,0 +1,160 @@
+img{
+    width: 60%; /*alterando a largura da img.*/
+    max-width: 600px;  /*Máximo de largura*/
+    height: auto; /*Manter a proporção.*/
+    
+    margin: 10px 0px; /*espaçamento entre a img e o conteúdo*/
+   }
+body{
+    line-height: 1.1; /*Espaçamento de linhas*/
+   padding: 70px; /*Espaçamento interno nas Bordas*/
+}
+h3{
+    color:#eb4b83;
+    margin-top: 20px; /*Espaço superior entre as seções*/
+    text-align: center;
+}
+body{
+    background-color: rgb(236, 238, 197);
+}
+section{
+    background-color: #f4f4f4;
+    padding: 30px;
+    margin: 20px;
+    
+}
+
+a{
+    color: #ff00996e;
+    text-decoration: none; /*link sem o urdelin*/
+    font-size:11px;
+}
+
+h4{
+    text-align: center;
+}
+
+/*escondendo o checkbox da tela*/
+#menu{
+    display: none;/*checkbox não vai aparecer mais*/
+    position: left; /*fica o menu na horizontal*/
+}
+/*estilização do botão (label)*/
+.menuicone{
+    display: block; /*exibe como um bloco em uma linha*/
+    background-color: rgb(238, 194, 209);
+    color:rgb(10, 0, 0);
+    padding: 10px;
+    cursor: pointer;/*cursor de maozinha*/
+    width: fit-content;/*ajusta a largura ao tamanho do conteúdo*/
+    
+
+}
+/*ocultando os ítens do menu*/
+.mobileM{
+    display: none;/*oculta itens*/
+    flex-direction: column;/*organizar em colunas os itens (empilhamento vertical), quando visíveis*/
+    background-color: rgb(238, 194, 209);
+    justify-content: space-around; /*distribui o espaçamento de forma linear (igual) entre eles*/
+    position: left; /*fica o menu na esquerda*/
+}
+/*estilizando a tag "a", links individuais*/
+.mobileM a{
+    text-decoration: none ;
+    color: rgb(0, 0, 0);
+    padding: 10px;
+    border-top: 1px solid rgb(0, 0, 0);/*linha separadora entre os itens - aplica borda superior aos elementos*/
+    transition: background 0.5s;/*se existe um evento hover para mudança de cor de fundo, ele suavizará essa mudança, deixando gradativa a internsificação da cor, neste caso deixamos a mudança definida em 0.5 segundos*/ 
+    transition: transform 0.5 ease;
+
+}
+
+/*regra que exibe o menu quando o checkbox é marcado*/
+#menu:checked + .menuicone + .mobileM{
+    display: flex;
+}
+
+.mobileM a:hover{
+    background-color: rgb(234, 229, 187);
+    transform: scale(1.03);/*aumeto em 3% o tamanho do card*/
+    padding: 10px; /*Espaço interno ao redor do texto*/
+    
+}
+
+.Menu{
+    display: flex;/* alinar os itens horizontamente*/
+    justify-content: space-around; /*distribui o espaçamento de forma linear (igual) entre eles*/
+    background-color: rgb(246, 255, 162); /*cor de fundo do menu*/
+    padding: 15px;/* o espaço interno padrão dos elementos da lista*/
+    position: fixed; /*fica o menu na horizontal*/
+    width: 100%;
+    z-index: 1000;
+    margin-top: -120px;
+    margin-left: -80px;/*distancia esquerda entre o menu e e a borda da pag*/
+}
+.Menu a{
+    text-decoration: none ;
+    color: rgb(0, 0, 0);
+    transition: transform 0.5 ease;
+}
+.Menu a:hover{
+    transform: scale(1.1);
+}
+
+img{
+    width: 200px;
+    max-width: 600px;
+    height: auto;
+    margin: 10px 0px;
+}
+
+.card{
+    background-color: rgba(238, 206, 231, 0.654);/*cor de fundo*/
+    border-radius: 10px; /*Bordas arredondadas*/
+     margin: 20px auto; /*espaçamento entre a img e o conteúdo*/
+    overflow: hidden;/*Ocultar o que passar dos limite do card*/
+    display: inline-block; /*coloca os cards lado a lado*/
+    vertical-align: top;/*alinha os cards*/
+    height: 900px;/*defina a altura dos cards*/
+    transition: transform 0.3s ease;/*animação na interação entre os cards*/
+}
+.card:hover{
+    transform: scale(1.03);/*aumeto em 3% o tamanho do card*/
+}
+/*estilização dos títulos dos cards*/
+.card-title{
+    font-size: 1.0rem;
+    color: #1a6067;
+    margin-bottom: 10px;/*espaço abaixo do titulo*/
+    margin-left: 10px;/*espaço à esquerda do titulo*/
+    text-align: center; /*centraliza o texto*/
+}
+/*estilizar parágrafo*/
+.card-text{
+    margin-left: 20px;
+    color: #7c3131;
+}
+/*ajustando a img*/
+.card-img-top{
+    width: 40%;
+    height: 30%;
+}
+
+.carousel-indicators{
+    background-color:#1a616700;
+}
+#carrossel4-Slides{
+    width: 100%;}
+#d-block{
+    width: 10%px;
+}
+
+
+
+
+@media(max-width:768px){
+    .card{
+        width: 90%;
+        margin: 20px auto;
+    }
+}
